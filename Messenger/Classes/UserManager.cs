@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// git
+
 namespace Messenger
 {
     public class UserManager

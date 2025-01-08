@@ -105,7 +105,7 @@ namespace Messenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 676);
+            this.ClientSize = new System.Drawing.Size(505, 673);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelAuthorization);
             this.Controls.Add(this.buttonApply);

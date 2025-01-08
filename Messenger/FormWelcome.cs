@@ -25,8 +25,10 @@ namespace Messenger
 
         private void buttonAuthorization_Click(object sender, EventArgs e)
         {
-            FormAuthorization formAuthorization = new FormAuthorization();
-            formAuthorization.ShowDialog();
+            //FormAuthorization formAuthorization = new FormAuthorization();
+            //formAuthorization.ShowDialog();
+            FormMessenger formMessenger = new FormMessenger();
+            formMessenger.ShowDialog();
         }
     }
 }
