@@ -22,6 +22,7 @@ namespace Messenger
             this.activeUser = activeUser;
 
             FillComboBoxUserSearch();
+            FillDataGridViewChatList();
         }
 
         public void FillComboBoxUserSearch()
@@ -31,6 +32,14 @@ namespace Messenger
             foreach (var login in logins)
             {
                 comboBoxUserSearch.Items.Add(login);
+            }
+        }
+        public void FillDataGridViewChatList()
+        {
+            List<string> chatNames = activeUser.GetChatsNames();
+            foreach (var chatName in chatNames)
+            {
+                dataGridViewChatList.Rows.Add(chatName);
             }
         }
     }

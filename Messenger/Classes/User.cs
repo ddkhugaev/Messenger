@@ -24,7 +24,7 @@ namespace Messenger
                 SW.Write("");
             }
         }
-        public List<string> GetUserChatsFiles()
+        public List<string> GetChatsFilesNames()
         {
             List<string> chatsFiles = new List<string>();
             using (StreamReader SR = new StreamReader($"Data/UserChats/{Login}.txt"))
@@ -36,6 +36,20 @@ namespace Messenger
                 }
             }
             return chatsFiles;
+        }
+        public List<string> GetChatsNames()
+        {
+            List<string> chatsNames = new List<string>();
+            List<string> chatsFilesNames = GetChatsFilesNames();
+
+            foreach (var s in chatsFilesNames)
+            {
+                List<string> chatFileName = s.TrimEnd('t').TrimEnd('x').TrimEnd('t').TrimEnd('.').Split('~').ToList();
+                chatFileName.Remove(Login);
+                chatsNames.Add(chatFileName[0]);
+            }
+
+            return chatsNames;
         }
     }
 }
