@@ -25,7 +25,7 @@ namespace Messenger
             if (validation.Item1)
             {
                 Close();
-                FormMessenger formMessenger = new FormMessenger();
+                FormMessenger formMessenger = new FormMessenger(userManager, userManager.GetUserByLogin(textBoxLogin.Text));
                 formMessenger.ShowDialog();
             }
         }

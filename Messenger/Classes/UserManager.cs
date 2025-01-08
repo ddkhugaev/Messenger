@@ -113,7 +113,32 @@ namespace Messenger
                 }
             }
 
+            user.CreateNewUserChatsFile();
+
             UserRegisteredHandler?.Invoke(this, new UserRegisteredEventArgs(user.Login, user.Password));
+        }
+        public User GetUserByLogin(string login)
+        {
+            if (IsUserExist(login))
+            {
+                foreach(var user in Users)
+                {
+                    if (login == user.Login)
+                    {
+                        return user;
+                    }
+                }
+            }
+            return null;
+        }
+        public List<string> GetAllLogins()
+        {
+            List<string> logins = new List<string>();
+            foreach (var user in Users)
+            {
+                logins.Add(user.Login);
+            }
+            return logins;
         }
     }
     public class UserRegisteredEventArgs : EventArgs

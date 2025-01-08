@@ -11,19 +11,31 @@ namespace Messenger
     {
         public string Login { get; }
         public string Password { get; }
-        public List<Chat> UserChats { get; set; } = new List<Chat>();
+        //public List<Chat> UserChats { get; set; } = new List<Chat>();
         public User(string login, string password)
         {
             Login = login;
             Password = password;
-            CreateNewChatFile();
         }
-        public void CreateNewChatFile()
+        public void CreateNewUserChatsFile()
         {
-            using (StreamWriter SR = new StreamWriter($"Data/Chats/{Login}.txt"))
+            using (StreamWriter SW = new StreamWriter($"Data/UserChats/{Login}.txt"))
             {
-                SR.Write("");
+                SW.Write("");
             }
+        }
+        public List<string> GetUserChatsFiles()
+        {
+            List<string> chatsFiles = new List<string>();
+            using (StreamReader SR = new StreamReader($"Data/UserChats/{Login}.txt"))
+            {
+                while (!SR.EndOfStream)
+                {
+                    string s = SR.ReadLine();
+                    chatsFiles.Add(s);
+                }
+            }
+            return chatsFiles;
         }
     }
 }

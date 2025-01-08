@@ -12,10 +12,26 @@ namespace Messenger
 {
     public partial class FormMessenger : Form
     {
-        public FormMessenger()
+        UserManager userManager;
+        User activeUser;
+        public FormMessenger(UserManager userManager, User activeUser)
         {
             InitializeComponent();
-            
+
+            this.userManager = userManager;
+            this.activeUser = activeUser;
+
+            FillComboBoxUserSearch();
+        }
+
+        public void FillComboBoxUserSearch()
+        {
+            List<string> logins = userManager.GetAllLogins();
+            logins.Remove(activeUser.Login);
+            foreach (var login in logins)
+            {
+                comboBoxUserSearch.Items.Add(login);
+            }
         }
     }
 }
