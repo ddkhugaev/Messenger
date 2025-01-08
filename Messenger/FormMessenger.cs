@@ -19,8 +19,11 @@ namespace Messenger
             dataGridViewChatList.Rows.Add("Геор");
             dataGridViewChatList.Rows.Add("Давид\ndddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
             dataGridViewChatList.Rows.Add("Заур");
-            dataGridViewChat.Rows.Add("dамшвfsdfsdfdfgdfgdfgdfgdfgdfgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd", "fgfdgggggggggggggggggggggggggggdf");
+            dataGridViewChat.Rows.Add("", "fgfdgggggggggg\ngggggggggggggggggdf");
             
+            dataGridViewChat.Rows.Add("dамшвfsdfsdfdf\ngdfg\ndfgdfgdfgdfgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd", "");
+            dataGridViewChat.Rows.Add("", "fgfdgggggggggggggggggggggggggggdf");
+            dataGridViewChat.Rows.Add("dамшвfsdfsdfdfgdfgffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfgdfgdfgdfgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd", "");
         }
     }
 }

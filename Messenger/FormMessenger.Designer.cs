@@ -29,12 +29,13 @@ namespace Messenger
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewChatList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewChat = new System.Windows.Forms.DataGridView();
             this.ColumnChats = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewChat = new System.Windows.Forms.DataGridView();
             this.ColumnMyMessages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnOtherMessages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChatList)).BeginInit();
@@ -63,12 +64,26 @@ namespace Messenger
             this.dataGridViewChatList.Size = new System.Drawing.Size(400, 672);
             this.dataGridViewChatList.TabIndex = 0;
             // 
+            // ColumnChats
+            // 
+            this.ColumnChats.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnChats.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnChats.HeaderText = "Column";
+            this.ColumnChats.MinimumWidth = 6;
+            this.ColumnChats.Name = "ColumnChats";
+            this.ColumnChats.ReadOnly = true;
+            this.ColumnChats.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // dataGridViewChat
             // 
             this.dataGridViewChat.AllowUserToAddRows = false;
             this.dataGridViewChat.AllowUserToDeleteRows = false;
             this.dataGridViewChat.AllowUserToResizeColumns = false;
             this.dataGridViewChat.AllowUserToResizeRows = false;
+            this.dataGridViewChat.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewChat.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewChat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewChat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -76,56 +91,47 @@ namespace Messenger
             this.dataGridViewChat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnMyMessages,
             this.ColumnOtherMessages});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewChat.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewChat.Location = new System.Drawing.Point(424, 0);
             this.dataGridViewChat.MultiSelect = false;
             this.dataGridViewChat.Name = "dataGridViewChat";
             this.dataGridViewChat.ReadOnly = true;
             this.dataGridViewChat.RowHeadersVisible = false;
             this.dataGridViewChat.RowHeadersWidth = 51;
-            this.dataGridViewChat.RowTemplate.Height = 50;
+            this.dataGridViewChat.RowTemplate.Height = 150;
             this.dataGridViewChat.Size = new System.Drawing.Size(832, 672);
             this.dataGridViewChat.TabIndex = 1;
             // 
-            // ColumnChats
-            // 
-            this.ColumnChats.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnChats.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ColumnChats.HeaderText = "Column";
-            this.ColumnChats.MinimumWidth = 6;
-            this.ColumnChats.Name = "ColumnChats";
-            this.ColumnChats.ReadOnly = true;
-            this.ColumnChats.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // ColumnMyMessages
             // 
-            this.ColumnMyMessages.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnMyMessages.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColumnMyMessages.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColumnMyMessages.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnMyMessages.HeaderText = "ColumnMyMessages";
             this.ColumnMyMessages.MinimumWidth = 6;
             this.ColumnMyMessages.Name = "ColumnMyMessages";
             this.ColumnMyMessages.ReadOnly = true;
             this.ColumnMyMessages.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnMyMessages.Width = 6;
             // 
             // ColumnOtherMessages
             // 
-            this.ColumnOtherMessages.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnOtherMessages.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ColumnOtherMessages.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColumnOtherMessages.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnOtherMessages.HeaderText = "ColumnOtherMessages";
             this.ColumnOtherMessages.MinimumWidth = 6;
             this.ColumnOtherMessages.Name = "ColumnOtherMessages";
             this.ColumnOtherMessages.ReadOnly = true;
             this.ColumnOtherMessages.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnOtherMessages.Width = 6;
             // 
             // FormMessenger
             // 
