@@ -19,7 +19,7 @@ namespace Messenger
             dataGridViewChatList.Rows.Add("Геор");
             dataGridViewChatList.Rows.Add("Давид\ndddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
             dataGridViewChatList.Rows.Add("Заур");
-            dataGridViewChat.Rows.Add("dfsdfsdfdfgdfgdfgdfgdfgdfgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd", "fgfdgggggggggggggggggggggggggggdf");
+            dataGridViewChat.Rows.Add("dаfsdfsdfdfgdfgdfgdfgdfgdfgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd", "fgfdgggggggggggggggggggggggggggdf");
             
         }
     }
