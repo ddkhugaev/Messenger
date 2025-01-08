@@ -137,7 +137,7 @@ namespace Messenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1257, 673);
             this.Controls.Add(this.dataGridViewChat);
             this.Controls.Add(this.dataGridViewChatList);
             this.Name = "FormMessenger";

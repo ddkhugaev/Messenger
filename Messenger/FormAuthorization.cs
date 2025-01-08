@@ -25,6 +25,8 @@ namespace Messenger
             if (validation.Item1)
             {
                 Close();
+                FormMessenger formMessenger = new FormMessenger();
+                formMessenger.ShowDialog();
             }
         }
     }
