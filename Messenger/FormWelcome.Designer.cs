@@ -29,6 +29,7 @@ namespace Messenger
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWelcome));
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.buttonAuthorization = new System.Windows.Forms.Button();
             this.labelWelcome = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@ namespace Messenger
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.buttonAuthorization);
             this.Controls.Add(this.buttonRegistration);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добро пожаловать";

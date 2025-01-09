@@ -33,6 +33,7 @@ namespace Messenger
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMessenger));
             this.dataGridViewChatList = new System.Windows.Forms.DataGridView();
             this.ColumnChats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewChat = new System.Windows.Forms.DataGridView();
@@ -204,6 +205,7 @@ namespace Messenger
             this.Controls.Add(this.comboBoxUserSearch);
             this.Controls.Add(this.dataGridViewChat);
             this.Controls.Add(this.dataGridViewChatList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMessenger";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Мессенджер";
