@@ -43,6 +43,7 @@ namespace Messenger
         }
         public void FillDataGridViewChatList()
         {
+            dataGridViewChatList.Rows.Clear();
             chatNames = activeUser.GetChatsNames();
             foreach (var chatName in chatNames)
             {
