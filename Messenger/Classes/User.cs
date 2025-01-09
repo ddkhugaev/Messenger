@@ -11,7 +11,6 @@ namespace Messenger
     {
         public string Login { get; }
         public string Password { get; }
-        //public List<Chat> UserChats { get; set; } = new List<Chat>();
         public User(string login, string password)
         {
             Login = login;
@@ -63,6 +62,26 @@ namespace Messenger
                 }
             }
             return null;
+        }
+        public void CreateNewChatFile(string toUser)
+        {
+            string fromUser = Login;
+            string fileName = $"{fromUser}~{toUser}.txt";
+
+            using (StreamWriter SR = new StreamWriter($"Data/UserChats/{fromUser}.txt", true))
+            {
+                SR.WriteLine(fileName);
+            }
+
+            using (StreamWriter SR = new StreamWriter($"Data/UserChats/{toUser}.txt", true))
+            {
+                SR.WriteLine(fileName);
+            }
+
+            using (StreamWriter SR = new StreamWriter($"Data/Chats/{fileName}", true))
+            {
+                SR.Write("");
+            }
         }
     }
 }

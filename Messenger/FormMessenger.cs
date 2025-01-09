@@ -15,6 +15,8 @@ namespace Messenger
         UserManager userManager;
         User activeUser;
         Chat activeChat;
+        List<string> chatNames = new List<string>();
+        bool isNewChat = false;
         public FormMessenger(UserManager userManager, User activeUser)
         {
             InitializeComponent();
@@ -26,6 +28,8 @@ namespace Messenger
             FillDataGridViewChatList();
             textBoxNewMessage.Enabled = false;
             buttonSendMessage.Enabled = false;
+
+            labelSendMessageForNewChat.Hide();
         }
 
         public void FillComboBoxUserSearch()
@@ -39,7 +43,7 @@ namespace Messenger
         }
         public void FillDataGridViewChatList()
         {
-            List<string> chatNames = activeUser.GetChatsNames();
+            chatNames = activeUser.GetChatsNames();
             foreach (var chatName in chatNames)
             {
                 dataGridViewChatList.Rows.Add(chatName);
@@ -77,6 +81,9 @@ namespace Messenger
             FillDataGridViewChat(activeChat);
             textBoxNewMessage.Enabled = true;
             buttonSendMessage.Enabled = true;
+
+            labelSendMessageForNewChat.Hide();
+            isNewChat = false;
         }
 
         private void buttonSendMessage_Click(object sender, EventArgs e)
@@ -84,10 +91,47 @@ namespace Messenger
             string textMessage = textBoxNewMessage.Text;
             if (!string.IsNullOrEmpty(textMessage))
             {
-                activeChat.AddNewMessage(activeUser.Login, DateTime.Now.ToString(), textMessage);
-                FillDataGridViewChat(activeChat);
-                textBoxNewMessage.Text = "";
+                if (!isNewChat)
+                {
+                    activeChat.AddNewMessage(activeUser.Login, DateTime.Now.ToString(), textMessage);
+                    FillDataGridViewChat(activeChat);
+                    textBoxNewMessage.Text = "";
+                }
+                else
+                {
+                    isNewChat = false;
+
+                    activeUser.CreateNewChatFile(comboBoxUserSearch.Text);
+                    chatNames.Add(comboBoxUserSearch.Text);
+                    activeChat = new Chat(activeUser.GetChatFileNameByChatName(comboBoxUserSearch.Text), activeUser);
+
+                    activeChat.AddNewMessage(activeUser.Login, DateTime.Now.ToString(), textMessage);
+                    FillDataGridViewChat(activeChat);
+                    textBoxNewMessage.Text = "";
+                    labelSendMessageForNewChat.Hide();
+                }
             }
+        }
+
+        private void comboBoxUserSearch_SelectedValueChanged(object sender, EventArgs e)
+        {
+            HideStartChatMessage();
+            MessageBox.Show("выбрано");
+            if (chatNames.Contains(comboBoxUserSearch.Text))
+            {
+                activeChat = new Chat(activeUser.GetChatFileNameByChatName(comboBoxUserSearch.Text), activeUser);
+                labelSendMessageForNewChat.Hide();
+                FillDataGridViewChat(activeChat);
+                isNewChat = false;
+            }
+            else
+            {
+                dataGridViewChat.Rows.Clear();
+                labelSendMessageForNewChat.Show();
+                isNewChat = true;
+            }
+            textBoxNewMessage.Enabled = true;
+            buttonSendMessage.Enabled = true;
         }
     }
 }

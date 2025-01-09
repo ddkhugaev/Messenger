@@ -29,10 +29,10 @@ namespace Messenger
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewChatList = new System.Windows.Forms.DataGridView();
             this.ColumnChats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewChat = new System.Windows.Forms.DataGridView();
@@ -42,6 +42,7 @@ namespace Messenger
             this.labelStartChatMessage = new System.Windows.Forms.Label();
             this.textBoxNewMessage = new System.Windows.Forms.TextBox();
             this.buttonSendMessage = new System.Windows.Forms.Button();
+            this.labelSendMessageForNewChat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChatList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChat)).BeginInit();
             this.SuspendLayout();
@@ -72,10 +73,10 @@ namespace Messenger
             // ColumnChats
             // 
             this.ColumnChats.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnChats.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnChats.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnChats.HeaderText = "Column";
             this.ColumnChats.MinimumWidth = 6;
             this.ColumnChats.Name = "ColumnChats";
@@ -96,14 +97,14 @@ namespace Messenger
             this.dataGridViewChat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnMyMessages,
             this.ColumnOtherMessages});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewChat.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewChat.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewChat.Location = new System.Drawing.Point(424, 0);
             this.dataGridViewChat.MultiSelect = false;
             this.dataGridViewChat.Name = "dataGridViewChat";
@@ -117,9 +118,9 @@ namespace Messenger
             // ColumnMyMessages
             // 
             this.ColumnMyMessages.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ColumnMyMessages.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColumnMyMessages.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnMyMessages.HeaderText = "ColumnMyMessages";
             this.ColumnMyMessages.MinimumWidth = 6;
             this.ColumnMyMessages.Name = "ColumnMyMessages";
@@ -129,9 +130,9 @@ namespace Messenger
             // ColumnOtherMessages
             // 
             this.ColumnOtherMessages.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ColumnOtherMessages.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColumnOtherMessages.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnOtherMessages.HeaderText = "ColumnOtherMessages";
             this.ColumnOtherMessages.MinimumWidth = 6;
             this.ColumnOtherMessages.Name = "ColumnOtherMessages";
@@ -148,6 +149,7 @@ namespace Messenger
             this.comboBoxUserSearch.Name = "comboBoxUserSearch";
             this.comboBoxUserSearch.Size = new System.Drawing.Size(400, 33);
             this.comboBoxUserSearch.TabIndex = 2;
+            this.comboBoxUserSearch.SelectedValueChanged += new System.EventHandler(this.comboBoxUserSearch_SelectedValueChanged);
             // 
             // labelStartChatMessage
             // 
@@ -179,11 +181,23 @@ namespace Messenger
             this.buttonSendMessage.UseVisualStyleBackColor = true;
             this.buttonSendMessage.Click += new System.EventHandler(this.buttonSendMessage_Click);
             // 
+            // labelSendMessageForNewChat
+            // 
+            this.labelSendMessageForNewChat.BackColor = System.Drawing.Color.White;
+            this.labelSendMessageForNewChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSendMessageForNewChat.Location = new System.Drawing.Point(448, 272);
+            this.labelSendMessageForNewChat.Name = "labelSendMessageForNewChat";
+            this.labelSendMessageForNewChat.Size = new System.Drawing.Size(784, 224);
+            this.labelSendMessageForNewChat.TabIndex = 6;
+            this.labelSendMessageForNewChat.Text = "Отправьте сообщение, чтобы начать новый чат";
+            this.labelSendMessageForNewChat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormMessenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 673);
+            this.Controls.Add(this.labelSendMessageForNewChat);
             this.Controls.Add(this.buttonSendMessage);
             this.Controls.Add(this.textBoxNewMessage);
             this.Controls.Add(this.labelStartChatMessage);
@@ -211,5 +225,6 @@ namespace Messenger
         private System.Windows.Forms.Label labelStartChatMessage;
         private System.Windows.Forms.TextBox textBoxNewMessage;
         private System.Windows.Forms.Button buttonSendMessage;
+        private System.Windows.Forms.Label labelSendMessageForNewChat;
     }
 }
