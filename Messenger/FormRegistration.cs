@@ -20,11 +20,11 @@ namespace Messenger
         private void buttonApply_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager();
-            Tuple<bool, string> validation = userManager.UserRegisterValidation(textBoxLogin.Text, textBoxPassword.Text);
+            Tuple<bool, string> validation = userManager.UserRegisterValidation(textBoxLogin.Text.ToLower(), textBoxPassword.Text);
             labelError.Text = validation.Item2;
             if (validation.Item1)
             {
-                userManager.Register(new User(textBoxLogin.Text, textBoxPassword.Text));
+                userManager.Register(new User(textBoxLogin.Text.ToLower(), textBoxPassword.Text));
                 MessageBox.Show("Вы зарегистрировались");
                 Close();
             }

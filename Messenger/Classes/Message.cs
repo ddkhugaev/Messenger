@@ -8,16 +8,15 @@ namespace Messenger
 {
     public class Message
     {
-        public User FromUser { get; set; }
-        public User ToUser { get; set; }
+        public string SenderLogin { get; set; }
+        public string Time { get; set; }
         public string Text { get; set; }
-        public DateTime Time { get; set; }
-        public Message(User fromUser, User toUser, string text, DateTime time)
+        //public DateTime Time { get; set; }
+        public Message(string senderLogin, string time, string text)
         {
-            FromUser = fromUser;
-            ToUser = toUser;
-            Text = text;
+            SenderLogin = senderLogin;
             Time = time;
+            Text = text;
         }
 
     }

@@ -51,5 +51,18 @@ namespace Messenger
 
             return chatsNames;
         }
+        public string GetChatFileNameByChatName(string chatName)
+        {
+            List<string> chatsFilesNames = GetChatsFilesNames();
+
+            foreach (var item in chatsFilesNames)
+            {
+                if (item.Contains(chatName))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
     }
 }
