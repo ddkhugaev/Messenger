@@ -41,16 +41,19 @@ namespace Messenger
             // 
             // textBoxLogin
             // 
+            this.textBoxLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLogin.Location = new System.Drawing.Point(96, 152);
+            this.textBoxLogin.ForeColor = System.Drawing.Color.White;
+            this.textBoxLogin.Location = new System.Drawing.Point(96, 248);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(312, 30);
             this.textBoxLogin.TabIndex = 0;
             // 
             // labelLogin
             // 
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogin.Location = new System.Drawing.Point(96, 128);
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.ForeColor = System.Drawing.Color.White;
+            this.labelLogin.Location = new System.Drawing.Point(96, 224);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(312, 23);
             this.labelLogin.TabIndex = 1;
@@ -58,8 +61,9 @@ namespace Messenger
             // 
             // labelPassword
             // 
-            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPassword.Location = new System.Drawing.Point(96, 208);
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPassword.ForeColor = System.Drawing.Color.White;
+            this.labelPassword.Location = new System.Drawing.Point(96, 304);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(312, 23);
             this.labelPassword.TabIndex = 3;
@@ -67,26 +71,33 @@ namespace Messenger
             // 
             // textBoxPassword
             // 
+            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Location = new System.Drawing.Point(96, 232);
+            this.textBoxPassword.ForeColor = System.Drawing.Color.White;
+            this.textBoxPassword.Location = new System.Drawing.Point(96, 328);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(312, 30);
             this.textBoxPassword.TabIndex = 2;
             // 
             // buttonApply
             // 
-            this.buttonApply.Location = new System.Drawing.Point(96, 280);
+            this.buttonApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.buttonApply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonApply.ForeColor = System.Drawing.Color.White;
+            this.buttonApply.Location = new System.Drawing.Point(96, 376);
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(312, 55);
             this.buttonApply.TabIndex = 4;
             this.buttonApply.Text = "Зарегистрироваться";
-            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.UseVisualStyleBackColor = false;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
             // labelRegistration
             // 
             this.labelRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegistration.Location = new System.Drawing.Point(24, 24);
+            this.labelRegistration.ForeColor = System.Drawing.Color.White;
+            this.labelRegistration.Location = new System.Drawing.Point(24, 120);
             this.labelRegistration.Name = "labelRegistration";
             this.labelRegistration.Size = new System.Drawing.Size(464, 80);
             this.labelRegistration.TabIndex = 5;
@@ -97,7 +108,7 @@ namespace Messenger
             // 
             this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(96, 360);
+            this.labelError.Location = new System.Drawing.Point(96, 456);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(312, 56);
             this.labelError.TabIndex = 6;
@@ -106,6 +117,7 @@ namespace Messenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(505, 673);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelRegistration);

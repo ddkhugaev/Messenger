@@ -61,10 +61,14 @@ namespace Messenger
                 if (item.SenderLogin == activeUser.Login)
                 {
                     dataGridViewChat.Rows.Add("", $"{item.Time}\n{item.Text}");
+                    dataGridViewChat.Rows[dataGridViewChat.Rows.Count - 1].Cells[0].Style.BackColor = Color.FromArgb(53, 63, 73);
+                    dataGridViewChat.Rows[dataGridViewChat.Rows.Count - 1].Cells[0].Style.SelectionBackColor = Color.FromArgb(53, 63, 73);
                 }
                 else
                 {
                     dataGridViewChat.Rows.Add($"{item.Time}\n{item.Text}", "");
+                    dataGridViewChat.Rows[dataGridViewChat.Rows.Count - 1].Cells[1].Style.BackColor = Color.FromArgb(53, 63, 73);
+                    dataGridViewChat.Rows[dataGridViewChat.Rows.Count - 1].Cells[1].Style.SelectionBackColor = Color.FromArgb(53, 63, 73);
                 }
             }
             if (dataGridViewChat.Rows.Count > 0)
@@ -109,6 +113,7 @@ namespace Messenger
                     FillDataGridViewChat(activeChat);
                     textBoxNewMessage.Text = "";
                     labelSendMessageForNewChat.Hide();
+                    FillDataGridViewChatList();
                 }
             }
         }
@@ -116,7 +121,6 @@ namespace Messenger
         private void comboBoxUserSearch_SelectedValueChanged(object sender, EventArgs e)
         {
             HideStartChatMessage();
-            MessageBox.Show("выбрано");
             if (chatNames.Contains(comboBoxUserSearch.Text))
             {
                 activeChat = new Chat(activeUser.GetChatFileNameByChatName(comboBoxUserSearch.Text), activeUser);

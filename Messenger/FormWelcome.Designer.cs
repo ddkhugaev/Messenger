@@ -37,28 +37,37 @@ namespace Messenger
             // 
             // buttonRegistration
             // 
-            this.buttonRegistration.Location = new System.Drawing.Point(88, 120);
+            this.buttonRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegistration.ForeColor = System.Drawing.Color.White;
+            this.buttonRegistration.Location = new System.Drawing.Point(88, 216);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(312, 55);
             this.buttonRegistration.TabIndex = 0;
             this.buttonRegistration.Text = "Зарегистрироваться";
-            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.UseVisualStyleBackColor = false;
             this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // buttonAuthorization
             // 
-            this.buttonAuthorization.Location = new System.Drawing.Point(88, 192);
+            this.buttonAuthorization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.buttonAuthorization.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAuthorization.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAuthorization.ForeColor = System.Drawing.Color.White;
+            this.buttonAuthorization.Location = new System.Drawing.Point(88, 288);
             this.buttonAuthorization.Name = "buttonAuthorization";
             this.buttonAuthorization.Size = new System.Drawing.Size(312, 32);
             this.buttonAuthorization.TabIndex = 1;
             this.buttonAuthorization.Text = "Войти в существующий аккаунт";
-            this.buttonAuthorization.UseVisualStyleBackColor = true;
+            this.buttonAuthorization.UseVisualStyleBackColor = false;
             this.buttonAuthorization.Click += new System.EventHandler(this.buttonAuthorization_Click);
             // 
             // labelWelcome
             // 
             this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcome.Location = new System.Drawing.Point(24, 24);
+            this.labelWelcome.ForeColor = System.Drawing.Color.White;
+            this.labelWelcome.Location = new System.Drawing.Point(24, 120);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(464, 80);
             this.labelWelcome.TabIndex = 2;
@@ -69,6 +78,7 @@ namespace Messenger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(505, 673);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.buttonAuthorization);
