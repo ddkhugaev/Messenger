@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Messenger
 {
+    // класс для работы с хранилищем пользователей
     public class UserManager
     {
         public List<User> Users { get; } = new List<User>();
@@ -22,6 +23,7 @@ namespace Messenger
                 }
             }
         }
+        // валидация при регистрации
         public Tuple<bool, string> UserRegisterValidation(string login, string password)
         {
             login = login.ToLower();
@@ -63,6 +65,7 @@ namespace Messenger
             }
             return new Tuple<bool, string>(true, "");
         }
+        // валидация при авторизации
         public Tuple<bool, string> UserAuthorizeValidation(string login, string password)
         {
             login = login.ToLower();
@@ -90,6 +93,7 @@ namespace Messenger
             }
             return new Tuple<bool, string>(true, "");
         }
+        // проверка существует ли пользователь
         public bool IsUserExist(string login)
         {
             foreach (var user in Users)
@@ -101,6 +105,7 @@ namespace Messenger
             }
             return false;
         }
+        // регистрация пользователя
         public void Register(User user)
         {
             Users.Add(user);
@@ -117,6 +122,7 @@ namespace Messenger
 
             UserRegisteredHandler?.Invoke(this, new UserRegisteredEventArgs(user.Login, user.Password));
         }
+        // получение экземпляра класса User с помощью логина пользователя
         public User GetUserByLogin(string login)
         {
             if (IsUserExist(login))
@@ -131,6 +137,7 @@ namespace Messenger
             }
             return null;
         }
+        // получение всех логинов из хранилища пользователей
         public List<string> GetAllLogins()
         {
             List<string> logins = new List<string>();

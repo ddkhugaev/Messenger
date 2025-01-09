@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Messenger
 {
+    // класс сообщения
     public class Message
     {
         public string SenderLogin { get; set; }

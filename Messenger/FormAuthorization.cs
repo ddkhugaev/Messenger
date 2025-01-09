@@ -16,7 +16,7 @@ namespace Messenger
         {
             InitializeComponent();
         }
-
+        // прохождение валидации при авторизации
         private void buttonApply_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager();

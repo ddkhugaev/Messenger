@@ -7,6 +7,7 @@ using System.IO;
 
 namespace Messenger
 {
+    // класс пользователя
     public class User
     {
         public string Login { get; }
@@ -16,6 +17,7 @@ namespace Messenger
             Login = login;
             Password = password;
         }
+        // создает текстовоый файл, хранящий названия всех текстовых файлов, содержащих чаты пользователя
         public void CreateNewUserChatsFile()
         {
             using (StreamWriter SW = new StreamWriter($"Data/UserChats/{Login}.txt"))
@@ -23,6 +25,7 @@ namespace Messenger
                 SW.Write("");
             }
         }
+        // получение названий всех текстовых файлов, содержащих чаты пользователя
         public List<string> GetChatsFilesNames()
         {
             List<string> chatsFiles = new List<string>();
@@ -36,6 +39,7 @@ namespace Messenger
             }
             return chatsFiles;
         }
+        // получение названий чатов (логин собеседника) с помощью названия каждого текстового файла
         public List<string> GetChatsNames()
         {
             List<string> chatsNames = new List<string>();
@@ -50,6 +54,7 @@ namespace Messenger
 
             return chatsNames;
         }
+        // получение названия текстового файла чата с помощью названия чата (логин собеседника)
         public string GetChatFileNameByChatName(string chatName)
         {
             List<string> chatsFilesNames = GetChatsFilesNames();
@@ -63,6 +68,7 @@ namespace Messenger
             }
             return null;
         }
+        // создание нового текстового файла чата
         public void CreateNewChatFile(string toUser)
         {
             string fromUser = Login;

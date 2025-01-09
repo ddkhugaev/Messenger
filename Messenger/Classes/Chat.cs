@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Messenger
 {
+    // класс чата
     public class Chat
     {
         public string ChatFileName { get; set; }
@@ -18,6 +19,7 @@ namespace Messenger
             ActiveUser = activeUser;
             RefreshMessages();
         }
+        // получение всех сообщений чата
         public void RefreshMessages()
         {
             using (StreamReader SR = new StreamReader($"Data/Chats/{ChatFileName}"))
@@ -29,6 +31,7 @@ namespace Messenger
                 }
             }
         }
+        // добавление нового сообщения в чат
         public void AddNewMessage(string senderLogin, string time, string text)
         {
             Messages.Add(new Message(senderLogin, time, text));

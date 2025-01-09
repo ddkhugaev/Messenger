@@ -31,7 +31,7 @@ namespace Messenger
 
             labelSendMessageForNewChat.Hide();
         }
-
+        // заполнение поиска пользователей всеми пользователями
         public void FillComboBoxUserSearch()
         {
             List<string> logins = userManager.GetAllLogins();
@@ -41,6 +41,7 @@ namespace Messenger
                 comboBoxUserSearch.Items.Add(login);
             }
         }
+        // заполнение списка чатов чатами
         public void FillDataGridViewChatList()
         {
             dataGridViewChatList.Rows.Clear();
@@ -50,10 +51,12 @@ namespace Messenger
                 dataGridViewChatList.Rows.Add(chatName);
             }
         }
+        // скрытие приветсвенного текста "выберите чат"
         public void HideStartChatMessage()
         {
             labelStartChatMessage.Hide();
         }
+        // заполнение таблицы чата сообщениями
         public void FillDataGridViewChat(Chat chat)
         {
             dataGridViewChat.Rows.Clear();
@@ -78,6 +81,7 @@ namespace Messenger
             }
             
         }
+        // выбор чата
         private void dataGridViewChatList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             HideStartChatMessage();
@@ -90,7 +94,7 @@ namespace Messenger
             labelSendMessageForNewChat.Hide();
             isNewChat = false;
         }
-
+        // отправка сообщения
         private void buttonSendMessage_Click(object sender, EventArgs e)
         {
             string textMessage = textBoxNewMessage.Text;
@@ -118,7 +122,7 @@ namespace Messenger
                 }
             }
         }
-
+        // выбор чата с помощью поиска
         private void comboBoxUserSearch_SelectedValueChanged(object sender, EventArgs e)
         {
             HideStartChatMessage();
