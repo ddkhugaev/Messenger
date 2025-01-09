@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Messenger
 {
     // класс для работы с хранилищем пользователей
-    public class UserManager
+    public class UserManager : IUserManager
     {
         public List<User> Users { get; } = new List<User>();
         public event EventHandler<UserRegisteredEventArgs> UserRegisteredHandler;
